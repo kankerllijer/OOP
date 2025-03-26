@@ -14,23 +14,22 @@ class Nota:
    def editar (self, nuevo_titulo, nuevo_contenido):
      self.titulo    = nuevo_titulo
      self.contenido = nuevo_contenido
- 
- class NotaTexto(Nota):
+class NotaTexto(Nota):
    def mostrar_contenido(self):
          return f"{self.contenido}"
  
- class NotaLista(Nota):
+class NotaLista(Nota):
    def mostrar_contenido(self):
          items = self.contenido.split(',')
          return "\n".join([f"\n• {item.strip()}" for item in items])
  
- class NotaImagen(Nota):
+class NotaImagen(Nota):
    def mostrar_contenido(self):
          return self.contenido
  
 # ________________GESTIÓN DE NOTAS_______________
  
- class BlocDeNotas:
+class BlocDeNotas:
    def __init__(self):
      self.notas = []
  
