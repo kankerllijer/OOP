@@ -2,7 +2,7 @@ import streamlit as st
 import uuid
 #_________________CLASES BASES_______________
 
- class Nota:
+class Nota:
    def __init__(self, titulo, contenido):
      self.titulo    = titulo
      self.contenido = contenido
